@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchBlogById } from "../services/blogs";
 import Comments from "./Comments";
 
-const Blog = () => {
+const Blog = ({ user }) => {
   const { id } = useParams();
 
   const {
@@ -15,14 +15,24 @@ const Blog = () => {
     queryFn: () => fetchBlogById(id),
   });
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (isLoading)
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>Loading...</p>
+      </div>
+    );
+  if (error)
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>Error: {error}</p>
+      </div>
+    );
 
   return (
-    <div>
-      <h2>{blog.title}</h2>
-      <div>{blog.content}</div>
-      <Comments blogId={id} comments={blog.comments} />
+    <div className="flex flex-col items-center px-2 py-6">
+      <h2 className="font-bold text-5xl text-gray-900 mb-6">{blog.title}</h2>
+      <div className="mb-6">{blog.content}</div>
+      <Comments blogId={id} comments={blog.comments} currentUser={user} />
     </div>
   );
 };
