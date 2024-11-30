@@ -32,7 +32,9 @@ const Blog = ({ user }) => {
   return (
     <div className="flex flex-col items-center px-2 py-6">
       <h2 className="font-bold text-5xl text-gray-900 mb-6">{blog.title}</h2>
-      <MDEditor.Markdown source={blog.content} />
+      <div className="w-full max-w-4xl px-4">
+        <MDEditor.Markdown source={blog.content} />
+      </div>
       <Comments blogId={id} comments={blog.comments} currentUser={user} />
     </div>
   );
