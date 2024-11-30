@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { fetchBlogById } from "../services/blogs";
+import MDEditor from "@uiw/react-md-editor";
 import Comments from "./Comments";
 
 const Blog = ({ user }) => {
@@ -31,7 +32,7 @@ const Blog = ({ user }) => {
   return (
     <div className="flex flex-col items-center px-2 py-6">
       <h2 className="font-bold text-5xl text-gray-900 mb-6">{blog.title}</h2>
-      <div className="mb-6">{blog.content}</div>
+      <MDEditor.Markdown source={blog.content} />
       <Comments blogId={id} comments={blog.comments} currentUser={user} />
     </div>
   );
