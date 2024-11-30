@@ -59,7 +59,7 @@ const App = () => {
               </svg>
               Me-lately
             </span>
-            <Link to="/blogs" className="hover:text-gray-500">
+            <Link to="/" className="hover:text-gray-500">
               home
             </Link>
             <Link to="/about" className="hover:text-gray-500">
@@ -98,7 +98,7 @@ const App = () => {
       </nav>
       <Routes>
         <Route path="/blogs/:id" element={<Blog user={user} />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/signup" element={<Signup />} />

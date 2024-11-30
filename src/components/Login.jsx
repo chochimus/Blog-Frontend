@@ -18,7 +18,7 @@ const Login = ({ setUser }) => {
       setUser(username);
       setUsername("");
       setPassword("");
-      navigate("/blogs");
+      navigate("/");
     },
     onError: (error) => {
       if (error.response) {
