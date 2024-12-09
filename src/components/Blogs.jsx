@@ -17,7 +17,8 @@ const Blogs = () => {
   if (isLoading)
     return (
       <div className="flex items-center justify-center h-screen">
-        <p>Loading...</p>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        <p className="ml-4 text-lg text-gray-700">Loading...</p>
       </div>
     );
   if (error)
@@ -30,7 +31,7 @@ const Blogs = () => {
   const visibleBlogs = blogs.slice(0, visibleCount);
 
   return (
-    <div className="flex flex-col p-4 max-w-4xl mx-auto">
+    <div className="flex flex-col p-4 max-w-4xl mx-auto my-6 sm:p-6">
       <h1 className="font-bold text-3xl text-gray-800 pb-6 border-b border-gray-300">
         Blogs
       </h1>
@@ -43,11 +44,11 @@ const Blogs = () => {
             >
               <Link
                 to={`/blogs/${blog.id}`}
-                className="block pl-4 py-6 font-semibold text-2xl text-gray-600 hover:text-gray-800 transition duration-150"
+                className="block pl-4 py-6 font-semibold text-xl sm:text-2xl text-gray-600 hover:text-gray-800 transition duration-150"
               >
                 {blog.title}
               </Link>
-              <p className="text-sm text-gray-400 mt-1">
+              <p className="text-xs sm:text-base text-gray-400 sm:mt-2">
                 {new Date(blog.createdAt).toLocaleDateString()}
               </p>
             </li>

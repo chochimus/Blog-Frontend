@@ -44,10 +44,10 @@ const App = () => {
 
   return (
     <Router>
-      <nav className="bg-gray-900 text-white h-16">
+      <nav className="bg-gray-900 text-white h-16 w-full">
         <div className="container mx-auto flex justify-between items-center h-full">
-          <div className="flex items-center gap-10">
-            <span className="flex items-center gap-2 font-bold text-lg">
+          <div className="flex items-center sm:gap-10 gap-4">
+            <span className="flex items-center gap-2 font-bold sm:text-lg text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -66,10 +66,9 @@ const App = () => {
               about
             </Link>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center sm:gap-5 gap-2">
             {user ? (
               <>
-                <p>hello, {user}</p>
                 <button
                   onClick={handleLogout}
                   className="bg-cyan-700 rounded px-3 py-1 hover:bg-cyan-800"
@@ -81,13 +80,13 @@ const App = () => {
               <>
                 <Link
                   to="/login"
-                  className="bg-cyan-700 rounded px-3 py-1 hover:bg-cyan-800"
+                  className="bg-cyan-700 rounded sm:px-3 sm:py-1 px-1 py-1 hover:bg-cyan-800 text-center"
                 >
                   log in
                 </Link>
                 <Link
                   to="/signup"
-                  className="bg-cyan-700 rounded px-3 py-1 hover:bg-cyan-800"
+                  className="bg-cyan-700 rounded sm:px-3 sm:py-1 px-1 py-1 hover:bg-cyan-800 text-center"
                 >
                   sign up
                 </Link>

@@ -6,6 +6,7 @@ import { useState } from "react";
 const Login = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const postLoginMutation = useMutation({
@@ -27,15 +28,21 @@ const Login = ({ setUser }) => {
         // Handle validation errors
         if (data.errors) {
           const validationErrors = data.errors
-            .map((err) => `${err.msg} (${err.param})`)
-            .join("\n");
-          alert(`Validation errors:\n${validationErrors}`);
+            .map((err) => `${err.msg}`)
+            .join(" and ");
+          setErrorMessage(`${validationErrors}`);
+          setTimeout(() => {
+            setErrorMessage("");
+          }, 5000);
           return;
         }
 
         // Handle other errors
         if (data.error) {
-          alert(`Error: ${data.error}`);
+          setErrorMessage(data.error);
+          setTimeout(() => {
+            setErrorMessage("");
+          }, 5000);
           return;
         }
 
@@ -62,6 +69,10 @@ const Login = ({ setUser }) => {
       <h2 className="text-center text-3xl font-extrabold text-gray-900 mb-6">
         login
       </h2>
+      {/* Display error message if there's one */}
+      {errorMessage && (
+        <div className="mb-4 text-red-500 text-sm">{errorMessage}</div>
+      )}
       <form onSubmit={onSubmit} className="w-full max-w-md space-y-6">
         <div className="flex flex-col space-y-4">
           <div>
