@@ -18,4 +18,3 @@ This repository contains the frontend for the Blog application, which interacts 
 - **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly and responsively.
 - **Express.js API**: The backend API that handles requests from the frontend, including user authentication, blog management, and comment processing.
 - **JWT Authentication**: JSON Web Tokens for secure user authentication and authorization.
-- **Input Validation and Sanitization**: Ensures that input data (especially comments) is sanitized and validated to prevent malicious activities such as XSS attacks.
