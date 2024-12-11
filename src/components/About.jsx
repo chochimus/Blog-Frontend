@@ -7,17 +7,17 @@ const About = () => {
       <ul className="text-center space-y-8">
         <li>
           <p className="text-sm sm:text-base text-gray-700">
-            Thanks for visiting my blog! I haven't made any actual content on
-            here yet. I'm mainly using this project to showcase my ability to
-            create and use my own RESTful api, as well as displaying it over a
-            React front-end.
+            "Thank you for visiting my blog! This project serves as a
+            demonstration of my ability to develop and utilize a custom RESTful
+            API that is seamlessly integrated with a React front-end."
           </p>
         </li>
         <li>
           <p className="text-sm sm:text-base text-gray-700">
-            Currently blogs are AI generated content to show the ability to
-            safely handle markdown style html from the database, but I may use
-            this as a personal blog in the future, it is fully functional!
+            Currently, the content of individual blogs is placeholder text
+            intended to showcase the secure handling of Markdown-style HTML
+            retrieved from the database. This platform is fully operational and
+            may be repurposed with more personal blogs in the future.
           </p>
         </li>
         <li>
