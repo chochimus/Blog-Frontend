@@ -32,11 +32,6 @@ const About = () => {
           </figure>
         </li>
         <li>
-          <p className="text-sm sm:text-base text-gray-700">
-            hover over the image to see the effect.
-          </p>
-        </li>
-        <li>
           <hr></hr>
         </li>
         <li>
