@@ -12,9 +12,9 @@ This repository contains the frontend for the Blog application, which interacts 
 
 ## Technologies Used
 
-- **React**: A JavaScript library for building user interfaces.
-- **React Query**: A library for fetching, caching, and synchronizing data with the backend API.
-- **React Router**: A library for handling navigation and dynamic routing in React applications.
-- **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly and responsively.
-- **Express.js API**: The backend API that handles requests from the frontend, including user authentication, blog management, and comment processing.
-- **JWT Authentication**: JSON Web Tokens for secure user authentication and authorization.
+- **React**
+- **React Query**
+- **React Router**
+- **Tailwind CSS**
+- **Express.js API**
+- **JWT Authentication**
